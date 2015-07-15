@@ -33,6 +33,8 @@ public class Empleado {
 		this.departament_id = departament_id;
 	}
 
+	
+
 	public int getEmployee_id() {
 		return employee_id;
 	}

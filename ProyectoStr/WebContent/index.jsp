@@ -8,11 +8,13 @@
 <title>Insert title here</title>
 </head>
 <body>
+
+
 <s:form action="empleadoid">
 
-<s:textfield name="id" label="id"></s:textfield>
+<s:textfield name="idempleado"  label="ID Empleado"></s:textfield>
 
-<s:submit>Enviar</s:submit>
+<s:submit value="Enviar"></s:submit>
 </s:form>
 
 </body>

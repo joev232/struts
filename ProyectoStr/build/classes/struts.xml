@@ -21,6 +21,10 @@
 		<action name="empleadoid" class="com.ejemplo.action.EmpleadoAction" method="execute">
 			<result name="success">/vista.jsp</result>
 		</action>
+		
+				<action name="emp" class="com.ejemplo.action.EmAction" method="execute">
+			<result name="success">/vistaemp.jsp</result>
+		</action>
 
 	</package>
 
