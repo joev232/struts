@@ -10,9 +10,9 @@
 <body>
 
 
-<s:form action="empleadoid">
+<s:form action="empleado">
 
-<s:textfield name="idempleado"  label="ID Empleado"></s:textfield>
+<s:textfield name="empleado"  label="ID Empleado"></s:textfield>
 
 <s:submit value="Enviar"></s:submit>
 </s:form>

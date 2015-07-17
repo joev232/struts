@@ -19,6 +19,16 @@
 		<!-- If the URL is hello.action the call the execute method of class HelloWorldAction.
 		If the result returned by the execute method is success render the HelloWorld.jsp -->
 
+
+		<action name="nombre" class="com.ejemplo.action.EmpleadoAct" method="execute">
+			<result name="success">/vistaemp.jsp</result>
+			<result name="input">/ini.jsp</result>
+		</action>
+
+
+		<action name="employeeId" class="com.ejemplo.action.EmpleadoAction" method="execute">
+			<result name="success">/vista.jsp</result>
+		</action>
 		
 		<action name="emp" class="com.ejemplo.action.EmAction" method="execute">
 			<result name="success">/vistaemp.jsp</result>

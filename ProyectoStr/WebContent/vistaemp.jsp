@@ -8,6 +8,12 @@
 <title>Insert title here</title>
 </head>
 <body>
-<s:property value="emp"/>
+<s:property value="nombre"/>
+
+<s:if test="hasActionMessages()">
+      <s:actionmessage/>
+</s:if>
+
+
 </body>
 </html>
