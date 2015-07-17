@@ -8,6 +8,25 @@
 	<constant name="struts.devMode" value="true" />
 
 	<package name="basicstruts2" extends="struts-default">
+	    
+	    
+	    	<interceptors>
+            <!-- <interceptor name="conInterfaz" class="org.apache.struts.helloworld.action.InterceptorCVE"/>
+            <interceptor name="sinInterfaz" class="org.apache.struts.helloworld.action.InterceptorSVE"/>-->
+            
+            <interceptor-stack name="mipiladefiltros">
+        		<interceptor-ref name="timer" />
+				<interceptor-ref name="params"/>
+				<!-- <interceptor-ref name="conInterfaz"/>
+				<interceptor-ref name="sinInterfaz"/> -->
+				<interceptor-ref name="defaultStack"/>
+        	</interceptor-stack>
+   		</interceptors>
+   		
+	    	
+	    
+	    
+	    
 
         <!-- If no class attribute is specified the framework will assume success and 
         render the result index.jsp -->
@@ -19,10 +38,30 @@
 		<!-- If the URL is hello.action the call the execute method of class HelloWorldAction.
 		If the result returned by the execute method is success render the HelloWorld.jsp -->
 
+			<action name="UploadFile" class="com.ejemplo.action.UploadFileAction">
+            <param name="directorio">C:\\val</param>
+            
+            <interceptor-ref name="defaultStack"> <!-- de este modo se garantiza el uso de defualt stack y sólo se parametrizar el intrepcetor fileUpload -->
+                <!-- <param name="fileUpload.maximumSize">999999999</param>-->
+                <param name="fileUpload.allowedTypes">text/plain,image/*,application/*</param>
+                <param name="validation.excludeMethods">espera</param>
+            </interceptor-ref>
+            <interceptor-ref name="logger" />
+            <interceptor-ref name="timer" />
+            <interceptor-ref name="execAndWait"/>
+    		<result name="wait">/espera.jsp</result>
+            <result name="success">/UploadFileSuccess.jsp</result>
+            <result name="input">/upfile.jsp</result>
+
+        </action>
+		
+		
+		
+
 
 		<action name="nombre" class="com.ejemplo.action.EmpleadoAct" method="execute">
 			<result name="success">/vistaemp.jsp</result>
-			<result name="input">/ini.jsp</result>
+			<result name="input">/error.jsp</result>
 		</action>
 
 
