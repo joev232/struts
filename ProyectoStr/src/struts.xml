@@ -54,10 +54,6 @@
             <result name="input">/upfile.jsp</result>
 
         </action>
-		
-		
-		
-
 
 		<action name="nombre" class="com.ejemplo.action.EmpleadoAct" method="execute">
 			<result name="success">/vistaemp.jsp</result>
